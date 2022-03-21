@@ -1,0 +1,17 @@
+{
+  "name": "devui-cli-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cli-test": "devui-cli dev",
+    "cli-version": "devui-cli -v",
+    "cli-help": "devui-cli -h"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@devui/cli": "workspace:*"
+  }
+}
