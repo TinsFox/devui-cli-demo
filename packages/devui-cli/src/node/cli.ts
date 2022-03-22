@@ -1,6 +1,4 @@
 import { cac } from "cac";
-import { createLogger } from "./logger";
-import colors from "picocolors";
 const cli = cac("devui-cli");
 // dev
 cli
@@ -13,16 +11,7 @@ cli
     // output structure is preserved even after bundling so require()
     // is ok here
     const { createServer } = await import("./server");
-
-    try {
-      await createServer();
-    } catch (e) {
-      createLogger(options.logLevel).error(
-        colors.red(`error when starting dev server:\n${e.stack}`),
-        { error: e }
-      );
-      process.exit(1);
-    }
+    await createServer();
   });
 
 cli.help();
