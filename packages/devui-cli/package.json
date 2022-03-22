@@ -9,7 +9,8 @@
   },
   "scripts": {
     "prepare": "pnpm dev",
-    "dev": "rimraf dist && rollup -c -w"
+    "dev": "rimraf dist && rollup -c -w",
+    "build": "rimraf dist && rollup -c"
   },
   "files": [
     "bin",
